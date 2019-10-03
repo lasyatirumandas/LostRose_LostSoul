@@ -9,18 +9,11 @@
         # PRINT belle talks about the items to be found in each realm
             # PRINT Enchanted Forest- Sword
             # PRINT Sherwood Forest- Robin's bow
-            # PRINT Conques, France- Magic Bean
             # (the rose will be in the Enchanted Forest)
         # The sword will help you fight the beast
         # The Bow is Robin's friendship, so you need to bring him along
-        # The magic bean is needed to travel
 
-# PRINT Belle talks about the supplies that you can look for or have along
-# the way, but needed:
-    # Food, Water, Magic Wand
-
-# PRINT you are in Conques, France right now and i will give you max of 2
-# magic beans use them wisely.
+# PRINT you are in Conques, France right now
 
 # If you want to go to the Enchnated forest, type Right
 # If you want to go to the Sherwood forest, type Left
@@ -109,23 +102,38 @@
                 # PRINT the beast is restoring himself
                 # PRINT you did it!!! success- game ends
                     # type right
-                            # PRINT you can hear the growls louder and make out a
-                                   figure from the dark
+                        # PRINT you can hear the growls louder and make out a
+                        # figure from the dark
+                        # type move closer
+                            # PRINT the beast awakes with the sound of your
+                            # footstep and scent
+                            # type defend
+                                # PRINT one slash across your chest
+                                # PRINT failed- game ends
+                            # type attack
+                                # PRINT Hey I will deal with him you go put the
+                                # rose in the case
+                                # type move forward
+                                    # PRINT you found the case. put the rose
+                                    # before the beast comes closer
+                                    # type put the rose in case
+                                    # PRINT the beast is restoring himself
+                                    # PRINT you did it!!! success- game ends
      # type right
-             # PRINT you can hear the growls louder and make out a
-                   figure from the dark
-                                   # type move closer
-                                           # PRINT the beast awakes with the sound of your
-                                                footstep and scent
-                                            # type defend
-                                                       # PRINT one slash across your chest
-                                                       # PRINT failed- game ends
-                                            # type attack
-                                                       #  PRINT Hey I will deal with him you go put the
-                                                               rose in the case
-                                                        # type move forward
-                                                               # PRINT you found the case. put the rose
-                                                                  before the beast comes closer
-                                                               # type put the rose in case
-                                                               # PRINT the beast is restoring himself
-                                                               # PRINT you did it!!! success- game ends
+        # PRINT you can hear the growls louder and make out a
+        # figure from the dark
+        # type move closer
+            # PRINT the beast awakes with the sound of your
+            # footstep and scent
+            # type defend
+                # PRINT one slash across your chest
+                # PRINT failed- game ends
+            # type attack
+                #  PRINT Hey I will deal with him you go put the
+                # rose in the case
+                # type move forward
+                    # PRINT you found the case. put the rose
+                    # before the beast comes closer
+                    # type put the rose in case
+                    # PRINT the beast is restoring himself
+                    # PRINT you did it!!! success- game ends
