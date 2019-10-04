@@ -1,4 +1,4 @@
 # Lost Rose Lost Soul changelog
 
-# prerelease version
+## prerelease version
 - Create a game file
