@@ -70,7 +70,7 @@
     # type move forward
         # PRINT you found the case. put the rose before the beast comes closer
             # type put the rose in case
-                # PRINT the beast is restoring himself
+                # PRINT the beast is restore into human form
                 # PRINT you did it!!! success- game ends
             # type hand rose to robin and look for beast
                 # type left
@@ -91,7 +91,7 @@
                             # PRINT you found the case. put the rose
                             # before the beast comes closer
                             # type put the rose in case
-                            # PRINT the beast is restoring himself
+                            # PRINT the beast restore into human form
                             # PRINT you did it!!! success- game ends
      # type left
         # PRINT nothing is here
@@ -99,26 +99,26 @@
                 # PRINT you found the case. put the rose before the beast comes
                 # closer
                 # type put the rose in case
-                # PRINT the beast is restoring himself
+                # PRINT the beast is restore into human form
                 # PRINT you did it!!! success- game ends
-                    # type right
-                        # PRINT you can hear the growls louder and make out a
-                        # figure from the dark
-                        # type move closer
-                            # PRINT the beast awakes with the sound of your
-                            # footstep and scent
-                            # type defend
-                                # PRINT one slash across your chest
-                                # PRINT failed- game ends
-                            # type attack
-                                # PRINT Hey I will deal with him you go put the
-                                # rose in the case
-                                # type move forward
-                                    # PRINT you found the case. put the rose
-                                    # before the beast comes closer
-                                    # type put the rose in case
-                                    # PRINT the beast is restoring himself
-                                    # PRINT you did it!!! success- game ends
+            # type right
+                # PRINT you can hear the growls louder and make out a
+                # figure from the dark
+                # type move closer
+                    # PRINT the beast awakes with the sound of your
+                    # footstep and scent
+                    # type defend
+                        # PRINT one slash across your chest
+                        # PRINT failed- game ends
+                    # type attack
+                        # PRINT Hey I will deal with him you go put the
+                        # rose in the case
+                        # type move forward
+                            # PRINT you found the case. put the rose
+                            # before the beast comes closer
+                            # type put the rose in case
+                            # PRINT the beast restore into human form
+                            # PRINT you did it!!! success- game ends
      # type right
         # PRINT you can hear the growls louder and make out a
         # figure from the dark
@@ -135,5 +135,5 @@
                     # PRINT you found the case. put the rose
                     # before the beast comes closer
                     # type put the rose in case
-                    # PRINT the beast is restoring himself
+                    # PRINT the beast is restore into human form
                     # PRINT you did it!!! success- game ends
