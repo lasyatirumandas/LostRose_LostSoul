@@ -1,3 +1,9 @@
+# Lasya Tirumandas
+# CS30 P1
+# October 11, 2019
+# Pseudocode for text-based game
+
+
 # Introducing Belle and her problem about the lost rose and the beast
     # PRINT belle talking about her problem and asks you for help
     # PRINT belle talkin about the rose and love that it represents in beast
