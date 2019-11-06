@@ -26,31 +26,22 @@
 
 # to Enchanted Forest:
     # PRINT You are in the Enchanted forest and you have found a sword on the
-    # ground
+    # ground and now that is yours
     # If you want to go right, type right
-        # You have come across an orge and you have to fight
-            # If you want to attack, type attack
-            # If you want to defend, type defend
-                # nothing happens
-            # If you want to run, type run
-            # nothing happens
-                 # (2 attacks and the orge is dead)
+            # THe orge is sleeping and you will let it sleep
     # If you want to go Left, type Left
         # PRINT nothing happens
-    # If you want to go up, type up
+    # If you want to go forward, type forward
         # PRINT nothing happens
-    # If you want to go down, type down
+    # If you want to go backward, type backward
         # PRINT THE ROSE
 
 # to Sherwood Forest:
     # PRINT You are in the Sherwood forest and Robin Hood greets you
     # have to make an alliance with him
         # PRINT RObin: I heard from Belle that you assistance with something
-            # type Yes
-        # PRINT Robin: Do you need help holding off the beast?
-            # type Yes
-        # PRINT Robin: I am willing to come with you
-            # type amazing!!
+        # and I will help you hold off the beast and
+        # I am willing to come with you
     # Now you got Robin's Bow
     # on the other side of the side, you hear villagers whispering abotu the
     # red rose, It might be the one you are looking for
@@ -62,57 +53,27 @@
     # PRINT Belle: did you find the rose
     # PRINT Robin: yes yes we did
     # PRINT Belle: that's amazing
-    # PRINT Robin: what do you want to do, now?
-        # type go to beast
-    # PRINT Robin: do you want me to come with you?
-        # type no
-            # PRINT Robin: you need his bow to help you defeat the beast
-            # type ok
-        # type yes
-            # PRINT Belle: boys get your weapons ready
-            # PRINT Belle: There he is
+    # PRINT Robin: We should hurry to the beast now and i will come with u
+    # PRINT Belle: boys get your weapons ready
+    # PRINT Belle: There he is
 
 # beast room
     # PRINT Robin: are you in here
     # PRINT Beast: *Growls*
     # type move forward
         # PRINT you found the case. put the rose before the beast comes closer
-            # type put the rose in case
                 # PRINT the beast is restore into human form
                 # PRINT you did it!!! success- game ends
-            # type hand rose to robin and look for beast
-                # type left
-                    # nothing is here
-                # type right
-                    # PRINT you can hear the growls louder and make out a
-                    # figure from the dark
-                    # type move closer
-                        # PRINT the beast awakes with the sound of your
-                        # footstep and scent
-                        # type defend
-                            # PRINT one slash across your chest
-                            # PRINT failed- game ends
-                        # type attack
-                            # PRINT Robin: Hey I will deal with him you go put
-                            # the rose in the case
-                            # type move forward
-                                # PRINT you found the case. put the rose
-                                # before the beast comes closer
-                                # type put the rose in case
-                                # PRINT the beast restore into human form
-                                # PRINT you did it!!! success- game ends
      # type left
         # PRINT nothing is here
             # type move forward
                 # PRINT you found the case. put the rose before the beast comes
                 # closer
-                # type put the rose in case
                 # PRINT the beast is restore into human form
                 # PRINT you did it!!! success- game ends
             # type right
                 # PRINT you can hear the growls louder and make out a
                 # figure from the dark
-                # type move closer
                     # PRINT the beast awakes with the sound of your
                     # footstep and scent
                     # type defend
@@ -121,16 +82,15 @@
                     # type attack
                         # PRINT Robin: Hey I will deal with him you go put the
                         # rose in the case
-                        # type move forward
-                            # PRINT you found the case. put the rose
-                            # before the beast comes closer
-                            # type put the rose in case
-                            # PRINT the beast restore into human form
-                            # PRINT you did it!!! success- game ends
+                        # you move forward
+                        # PRINT you found the case. put the rose
+                        # before the beast comes closer
+                        # type put the rose in case
+                        # PRINT the beast restore into human form
+                        # PRINT you did it!!! success- game ends
      # type right
         # PRINT you can hear the growls louder and make out a
         # figure from the dark
-        # type move closer
             # PRINT the beast awakes with the sound of your
             # footstep and scent
             # type defend
@@ -139,9 +99,8 @@
             # type attack
                 #  PRINT Robin: Hey I will deal with him you go put the
                 # rose in the case
-                # type move forward
-                    # PRINT you found the case. put the rose
-                    # before the beast comes closer
-                    # type put the rose in case
-                    # PRINT the beast is restore into human form
-                    # PRINT you did it!!! success- game ends
+                # You move forward
+                # PRINT you found the case. put the rose
+                # before the beast comes closer
+                # PRINT the beast is restore into human form
+                # PRINT you did it!!! success- game ends
