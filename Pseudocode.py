@@ -76,10 +76,6 @@
                 # figure from the dark
                     # PRINT the beast awakes with the sound of your
                     # footstep and scent
-                    # type defend
-                        # PRINT one slash across your chest
-                        # PRINT failed- game ends
-                    # type attack
                         # PRINT Robin: Hey I will deal with him you go put the
                         # rose in the case
                         # you move forward
@@ -93,10 +89,6 @@
         # figure from the dark
             # PRINT the beast awakes with the sound of your
             # footstep and scent
-            # type defend
-                # PRINT one slash across your chest
-                # PRINT failed- game ends
-            # type attack
                 #  PRINT Robin: Hey I will deal with him you go put the
                 # rose in the case
                 # You move forward

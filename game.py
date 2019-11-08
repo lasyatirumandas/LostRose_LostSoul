@@ -34,9 +34,9 @@ def play():
             if action_input == 'Quit':
                 break
             elif action_input == 'Places':
-                choose_Enchanted_Forest()
-                choose_Sherwood_Forest()
-                choose_Conques_France()
+                print(choose_Enchanted_Forest())
+                print(choose_Sherwood_Forest())
+                print(choose_Conques_France())
         else:
             print("Invalid action")
 
