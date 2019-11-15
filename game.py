@@ -5,9 +5,11 @@
 
 
 # things to do
-Actions = ['Quit', 'Places']
+Actions = {'Quit', 'Places'}
 #directions
 Directions = ['Left', 'Right', 'Forward', 'Backward']
+# Places
+Locations = ['Enchanted Forest', 'Sherwood Forest', 'Conques France']
 
 
 def play():
@@ -26,17 +28,27 @@ def play():
     print("Right now, you are in Conques, France.")
     print("Please come back here when you find the Rose.")
     # print list of valid actions
-    print(Actions)
+    for action in Actions:
+        print(f"- {action}")
     while True:
         action_input = get_command("Action: ")
-        if action_input in Actions:
-            print(f"{action_input.title()}")
+        for action_input in Actions:
             if action_input == 'Quit':
                 break
             elif action_input == 'Places':
-                print('choose_Enchanted_Forest')
-                print('choose_Sherwood_Forest')
-                print('choose_Conques_France')
+                print('- Enchanted Forest')
+                print('- Sherwood Forest')
+                print('- Conques France')
+                location_input = get_command("Location: ")
+                for location_input in Locations:
+                    if location_input == 'Enchanted Forest':
+                        choose_Enchanted_Forest()
+                    elif location_input == 'Sherwood Forest':
+                        choose_Sherwood_Forest()
+                    elif location_input == 'Conques France':
+                        choose_Conques_France()
+                    else:
+                        print("Invalid action")
         else:
             print("Invalid action")
 
@@ -44,6 +56,7 @@ def play():
 def get_command(message):
     action_input = input(message)
     return action_input.title()
+
 
 # defining enchnated forest
 def choose_Enchanted_Forest():
