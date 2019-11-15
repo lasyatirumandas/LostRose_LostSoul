@@ -93,7 +93,7 @@ def choose_Sherwood_Forest():
     print("Rose you are looking for")
     print("VILLAGERS: I heard that the red rose to heal the beast is in the")
     print("Enchanted forest.")
-    print("ROBIN: Let's got to the Enchanted Forest")
+    print("ROBIN: Let's go to the Enchanted Forest")
 
 
 def choose_Conques_France():
