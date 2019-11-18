@@ -63,6 +63,7 @@ def choose_Enchanted_Forest():
     print("You are in the Enchanted forest and you have found a sword on the")
     print("ground and now that is yours.")
     print(Directions)
+    print("Type 'Back' to go to main menu.")
     while True:
         direction_input = get_command('What direction?')
         if direction_input in Directions:
@@ -79,6 +80,8 @@ def choose_Enchanted_Forest():
             elif direction_input == 'Backward':
                 print(f"Moving Backward")
                 print(f"You have found the Rose")
+            elif directions_input == 'Back':
+                break
         else:
             print("Invalid Direction")
 
