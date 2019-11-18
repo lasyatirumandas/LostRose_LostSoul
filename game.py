@@ -6,8 +6,8 @@
 import sys
 # things to do
 Actions = {'Quit', 'Places'}
-#directions
-Directions = ['Left', 'Right', 'Forward', 'Backward', 'Back']
+# directions
+Directions = ['Left', 'Right', 'Forward', 'Backward', 'Quit', 'Places']
 # Places
 Locations = ['Enchanted Forest', 'Sherwood Forest', 'Conques France']
 
@@ -52,6 +52,7 @@ def play():
         else:
             print("Invalid action")
 
+
 # defining get command function for player input
 def get_command(message):
     action_input = input(message)
@@ -63,7 +64,6 @@ def choose_Enchanted_Forest():
     print("You are in the Enchanted forest and you have found a sword on the")
     print("ground and now that is yours.")
     print(Directions)
-    print("Type 'Back' to go to main menu.")
     while True:
         direction_input = get_command('What direction?')
         if direction_input in Directions:
@@ -80,10 +80,25 @@ def choose_Enchanted_Forest():
             elif direction_input == 'Backward':
                 print(f"Moving Backward")
                 print(f"You have found the Rose")
-            elif direction_input == 'Back':
-                break
+            elif direction_input == 'Quit':
+                sys.exit()
+            elif direction_input == 'Places':
+                print('- Enchanted Forest')
+                print('- Sherwood Forest')
+                print('- Conques France')
+                location_input = get_command("Location: ")
+                for location_input in Locations:
+                    if location_input == 'Enchanted Forest':
+                        choose_Enchanted_Forest()
+                    elif location_input == 'Sherwood Forest':
+                        choose_Sherwood_Forest()
+                    elif location_input == 'Conques France':
+                        choose_Conques_France()
+                    else:
+                        print("Invalid action")
         else:
             print("Invalid Direction")
+
 
 def choose_Sherwood_Forest():
     print("You are in the Sherwood forest and Robin Hood greets you.")
@@ -97,6 +112,29 @@ def choose_Sherwood_Forest():
     print("VILLAGERS: I heard that the red rose to heal the beast is in the")
     print("Enchanted forest.")
     print("ROBIN: Let's go to the Enchanted Forest")
+    for action in Actions:
+        print(f"- {action}")
+    while True:
+        action_input = get_command("Action: ")
+        for action_input in Actions:
+            if action_input == 'Quit':
+                sys.exit()
+            elif action_input == 'Places':
+                print('- Enchanted Forest')
+                print('- Sherwood Forest')
+                print('- Conques France')
+                location_input = get_command("Location: ")
+                for location_input in Locations:
+                    if location_input == 'Enchanted Forest':
+                        choose_Enchanted_Forest()
+                    elif location_input == 'Sherwood Forest':
+                        choose_Sherwood_Forest()
+                    elif location_input == 'Conques France':
+                        choose_Conques_France()
+                    else:
+                        print("Invalid action")
+        else:
+            print("Invalid action")
 
 
 def choose_Conques_France():
@@ -127,9 +165,24 @@ def choose_Conques_France():
                 print("You found the case to put the rose before the beast")
                 print("comes closer. The beast restores into human form, now.")
                 print("You did it!!! Success")
+            elif direction_input == 'Quit':
+                sys.exit()
+            elif direction_input == 'Places':
+                print('- Enchanted Forest')
+                print('- Sherwood Forest')
+                print('- Conques France')
+                location_input = get_command("Location: ")
+                for location_input in Locations:
+                    if location_input == 'Enchanted Forest':
+                        choose_Enchanted_Forest()
+                    elif location_input == 'Sherwood Forest':
+                        choose_Sherwood_Forest()
+                    elif location_input == 'Conques France':
+                        choose_Conques_France()
+                    else:
+                        print("Invalid action")
         else:
             print("Invalid Direction")
-
 
 
 play()
