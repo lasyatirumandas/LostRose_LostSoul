@@ -3,11 +3,11 @@
 # Nov 6, 2019
 # Continuous Game Play
 
-
+import sys
 # things to do
 Actions = {'Quit', 'Places'}
 #directions
-Directions = ['Left', 'Right', 'Forward', 'Backward']
+Directions = ['Left', 'Right', 'Forward', 'Backward', 'Back']
 # Places
 Locations = ['Enchanted Forest', 'Sherwood Forest', 'Conques France']
 
@@ -34,7 +34,7 @@ def play():
         action_input = get_command("Action: ")
         for action_input in Actions:
             if action_input == 'Quit':
-                break
+                sys.exit()
             elif action_input == 'Places':
                 print('- Enchanted Forest')
                 print('- Sherwood Forest')
@@ -80,7 +80,7 @@ def choose_Enchanted_Forest():
             elif direction_input == 'Backward':
                 print(f"Moving Backward")
                 print(f"You have found the Rose")
-            elif directions_input == 'Back':
+            elif direction_input == 'Back':
                 break
         else:
             print("Invalid Direction")
