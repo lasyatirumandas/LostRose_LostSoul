@@ -4,6 +4,7 @@
 # Continuous Game Play
 
 import sys
+import Map
 # things to do
 Actions = {'Quit', 'Places'}
 # directions
@@ -27,6 +28,7 @@ def play():
     print("will be waiting for you in Sherwood Forest.")
     print("Right now, you are in Conques, France.")
     print("Please come back here when you find the Rose.")
+    Map.land_maps()
     # print list of valid actions
     for action in Actions:
         print(f"- {action}")
@@ -39,6 +41,7 @@ def play():
                 print('- Enchanted Forest')
                 print('- Sherwood Forest')
                 print('- Conques France')
+                print()
                 location_input = get_command("Location: ")
                 for location_input in Locations:
                     if location_input == 'Enchanted Forest':
