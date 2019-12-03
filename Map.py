@@ -21,7 +21,7 @@ def land_maps():
     """Printing the map that looks above"""
     for rows in land_map:
         print(rows)
-        
-        
+
+
 # Print the land_map
 print(land_maps())
