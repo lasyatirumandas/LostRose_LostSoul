@@ -14,6 +14,7 @@ Locations = ['Enchanted Forest', 'Sherwood Forest', 'Conques France']
 
 
 def play():
+    """Function for the Introduction of the game"""
     # print the title
     print("Lost Rose, Lost Soul")
     # belle introduction
@@ -28,8 +29,9 @@ def play():
     print("will be waiting for you in Sherwood Forest.")
     print("Right now, you are in Conques, France.")
     print("Please come back here when you find the Rose.")
+    # printing the map here
     Map.land_maps()
-    # print list of valid actions
+    # print list of valid actions and the places inside option places
     for action in Actions:
         print(f"- {action}")
     while True:
@@ -58,14 +60,17 @@ def play():
 
 # defining get command function for player input
 def get_command(message):
+    """making the input captial"""
     action_input = input(message)
     return action_input.title()
 
 
 # defining enchnated forest
 def choose_Enchanted_Forest():
+    """Function for what happens in the Enchanted Forest"""
     print("You are in the Enchanted forest and you have found a sword on the")
     print("ground and now that is yours.")
+    # Options for direction input
     print(Directions)
     while True:
         direction_input = get_command('What direction?')
@@ -104,6 +109,7 @@ def choose_Enchanted_Forest():
 
 
 def choose_Sherwood_Forest():
+    """
     print("You are in the Sherwood forest and Robin Hood greets you.")
     print("Robin Hood and you have become alliances in this adventure.")
     print("ROBIN: I heard from Belle that you need assistance with something")
