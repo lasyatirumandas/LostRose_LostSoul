@@ -42,21 +42,12 @@ def play():
             if action_input == 'Quit':
                 sys.exit()
             elif action_input == 'Places':
-                print('- Enchanted Forest')
-                print('- Sherwood Forest')
-                print('- Conques France')
+                for location in Locations:
+                    print(location)
+                print('- Enchanted Forest') 
                 print()
                 # option for place input to go to another place
-                location_input = get_command("Location: ")
-                for location_input in Locations:
-                    if location_input == 'Enchanted Forest':
-                        choose_Enchanted_Forest()
-                    elif location_input == 'Sherwood Forest':
-                        choose_Sherwood_Forest()
-                    elif location_input == 'Conques France':
-                        choose_Conques_France()
-                    else:
-                        print("Invalid action")
+                locations_inputs()
         else:
             print("Invalid action")
 
@@ -93,20 +84,10 @@ def choose_Enchanted_Forest():
             elif direction_input == 'Quit':
                 sys.exit()
             elif direction_input == 'Places':
-                print('- Enchanted Forest')
-                print('- Sherwood Forest')
-                print('- Conques France')
+                for location in Locations:
+                    print(location)
                 # option for place input to go to another place
-                location_input = get_command("Location: ")
-                for location_input in Locations:
-                    if location_input == 'Enchanted Forest':
-                        choose_Enchanted_Forest()
-                    elif location_input == 'Sherwood Forest':
-                        choose_Sherwood_Forest()
-                    elif location_input == 'Conques France':
-                        choose_Conques_France()
-                    else:
-                        print("Invalid action")
+                locations_inputs()
         else:
             print("Invalid Direction")
 
@@ -132,21 +113,11 @@ def choose_Sherwood_Forest():
         for action_input in Actions:
             if action_input == 'Quit':
                 sys.exit()
+            # option for place input to go to another place
             elif action_input == 'Places':
-                print('- Enchanted Forest')
-                print('- Sherwood Forest')
-                print('- Conques France')
-                # option for place input to go to another place
-                location_input = get_command("Location: ")
-                for location_input in Locations:
-                    if location_input == 'Enchanted Forest':
-                        choose_Enchanted_Forest()
-                    elif location_input == 'Sherwood Forest':
-                        choose_Sherwood_Forest()
-                    elif location_input == 'Conques France':
-                        choose_Conques_France()
-                    else:
-                        print("Invalid action")
+                for location in Locations:
+                    print(location)
+                locations_inputs()
         else:
             print("Invalid action")
 
@@ -188,21 +159,25 @@ def choose_Conques_France():
                 sys.exit()
             # option for place input to go to another place
             elif direction_input == 'Places':
-                print('- Enchanted Forest')
-                print('- Sherwood Forest')
-                print('- Conques France')
-                location_input = get_command("Location: ")
-                for location_input in Locations:
-                    if location_input == 'Enchanted Forest':
-                        choose_Enchanted_Forest()
-                    elif location_input == 'Sherwood Forest':
-                        choose_Sherwood_Forest()
-                    elif location_input == 'Conques France':
-                        choose_Conques_France()
-                    else:
-                        print("Invalid action")
+                for location in Locations:
+                    print(location)
+                locations_inputs()
         else:
             print("Invalid Direction")
+
+
+def locations_inputs():
+    """This function allows people to input which location they want to go"""
+    location_input = get_command("Location: ")
+    for location_input in Locations:
+        if location_input == 'Enchanted Forest':
+            choose_Enchanted_Forest()
+        elif location_input == 'Sherwood Forest':
+            choose_Sherwood_Forest()
+        elif location_input == 'Conques France':
+            choose_Conques_France()
+        else:
+            print("Invalid action")
 
 
 # Calling the function play to play the game
