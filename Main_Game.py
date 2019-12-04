@@ -3,7 +3,9 @@
 # Nov 6, 2019
 # Continuous Game Play
 
+# importing a file for exiting the game
 import sys
+# importing map file to print land map here
 import Map
 # things to do
 Actions = {'Quit', 'Places'}
@@ -14,6 +16,7 @@ Locations = ['Enchanted Forest', 'Sherwood Forest', 'Conques France']
 
 
 def play():
+    """Function for the Introduction of the game"""
     # print the title
     print("Lost Rose, Lost Soul")
     # belle introduction
@@ -28,8 +31,9 @@ def play():
     print("will be waiting for you in Sherwood Forest.")
     print("Right now, you are in Conques, France.")
     print("Please come back here when you find the Rose.")
+    # printing the map here
     Map.land_maps()
-    # print list of valid actions
+    # print list of valid actions and the places inside option places
     for action in Actions:
         print(f"- {action}")
     while True:
@@ -42,6 +46,7 @@ def play():
                 print('- Sherwood Forest')
                 print('- Conques France')
                 print()
+                # option for place input to go to another place
                 location_input = get_command("Location: ")
                 for location_input in Locations:
                     if location_input == 'Enchanted Forest':
@@ -58,14 +63,17 @@ def play():
 
 # defining get command function for player input
 def get_command(message):
+    """making the input captial"""
     action_input = input(message)
     return action_input.title()
 
 
-# defining enchnated forest
+# defining enchanted forest
 def choose_Enchanted_Forest():
+    """Function for what happens and your chooses in Enchanted Forest"""
     print("You are in the Enchanted forest and you have found a sword on the")
     print("ground and now that is yours.")
+    # Options for direction input and what happens in each direction
     print(Directions)
     while True:
         direction_input = get_command('What direction?')
@@ -89,6 +97,7 @@ def choose_Enchanted_Forest():
                 print('- Enchanted Forest')
                 print('- Sherwood Forest')
                 print('- Conques France')
+                # option for place input to go to another place
                 location_input = get_command("Location: ")
                 for location_input in Locations:
                     if location_input == 'Enchanted Forest':
@@ -103,7 +112,9 @@ def choose_Enchanted_Forest():
             print("Invalid Direction")
 
 
+# defining sherwood forest
 def choose_Sherwood_Forest():
+    """Function for what happens and your chooses in Sherwood Forest"""
     print("You are in the Sherwood forest and Robin Hood greets you.")
     print("Robin Hood and you have become alliances in this adventure.")
     print("ROBIN: I heard from Belle that you need assistance with something")
@@ -115,6 +126,7 @@ def choose_Sherwood_Forest():
     print("VILLAGERS: I heard that the red rose to heal the beast is in the")
     print("Enchanted forest.")
     print("ROBIN: Let's go to the Enchanted Forest")
+    # Options for action input
     for action in Actions:
         print(f"- {action}")
     while True:
@@ -126,6 +138,7 @@ def choose_Sherwood_Forest():
                 print('- Enchanted Forest')
                 print('- Sherwood Forest')
                 print('- Conques France')
+                # option for place input to go to another place
                 location_input = get_command("Location: ")
                 for location_input in Locations:
                     if location_input == 'Enchanted Forest':
@@ -140,7 +153,9 @@ def choose_Sherwood_Forest():
             print("Invalid action")
 
 
+# defining conques france forest
 def choose_Conques_France():
+    """Function for what happens and your chooses in conques france"""
     print("You are in France.")
     print("BELLE: Did you find the rose?")
     print("ROBIN: Yes yes we did!")
@@ -149,20 +164,24 @@ def choose_Conques_France():
     print("BELLE: Boys get your weapons ready.")
     print("BELLE: There he is")
     print("This is the Beast room.")
+    # Options for direction input and what happens in each direction
     print(Directions)
     while True:
         direction_input = get_command('What direction?')
         if direction_input in Directions:
             print(f"{direction_input.title()}")
+            # Left options leads to nothing
             if direction_input == 'Left':
                 print(f"Moving Left")
                 print("Nothing is here")
+            # this shows what happens when right option
             elif direction_input == 'Right':
                 print(f"Moving Right")
                 print("You can hear the growls louder and make out a")
                 print("figure from the dark.")
                 print("The beast awakes with the sound of your footsteps.")
                 print("ROBIN: Hey I will deal with him, you go put the Rose.")
+            # this shows what happens when forward option
             elif direction_input == 'Forward':
                 print(f"Moving Forward")
                 print("You found the case to put the rose before the beast")
@@ -170,6 +189,7 @@ def choose_Conques_France():
                 print("You did it!!! Success")
             elif direction_input == 'Quit':
                 sys.exit()
+            # option for place input to go to another place
             elif direction_input == 'Places':
                 print('- Enchanted Forest')
                 print('- Sherwood Forest')
@@ -188,4 +208,5 @@ def choose_Conques_France():
             print("Invalid Direction")
 
 
+# Calling the function play to play the game
 play()
