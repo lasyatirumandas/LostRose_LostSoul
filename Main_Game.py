@@ -41,12 +41,10 @@ def play():
         for action_input in Actions:
             if action_input == 'Quit':
                 sys.exit()
+            # option for place input to go to another place
             elif action_input == 'Places':
                 for location in Locations:
                     print(location)
-                print('- Enchanted Forest') 
-                print()
-                # option for place input to go to another place
                 locations_inputs()
         else:
             print("Invalid action")
