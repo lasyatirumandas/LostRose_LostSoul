@@ -68,7 +68,6 @@ def get_command(message):
     return action_input.title()
 
 
-# defining enchanted forest
 def choose_Enchanted_Forest():
     """Function for what happens and your chooses in Enchanted Forest"""
     print("You are in the Enchanted forest and you have found a sword on the")
@@ -112,7 +111,6 @@ def choose_Enchanted_Forest():
             print("Invalid Direction")
 
 
-# defining sherwood forest
 def choose_Sherwood_Forest():
     """Function for what happens and your chooses in Sherwood Forest"""
     print("You are in the Sherwood forest and Robin Hood greets you.")
@@ -153,7 +151,6 @@ def choose_Sherwood_Forest():
             print("Invalid action")
 
 
-# defining conques france forest
 def choose_Conques_France():
     """Function for what happens and your chooses in conques france"""
     print("You are in France.")
