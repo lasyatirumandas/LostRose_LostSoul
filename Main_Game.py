@@ -7,6 +7,8 @@
 import sys
 # importing map file to print land map here
 import Map
+# importing character file to print land map here
+import Character
 # things to do
 Actions = {'Quit', 'Places'}
 # directions
