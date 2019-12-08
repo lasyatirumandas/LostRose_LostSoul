@@ -32,7 +32,11 @@ def play():
     print("Right now, you are in Conques, France.")
     print("Please come back here when you find the Rose.")
     # printing the map here
-    Map.land_maps()
+    Maps = Map("Maps")
+    print(Maps.printing_map())
+    # printing the characters here
+    character = characters("Character Names")
+    print(character.printing_characters())
     # print list of valid actions and the places inside option places
     for action in Actions:
         print(f"- {action}")
