@@ -6,7 +6,9 @@
 # importing a file for exiting the game
 import sys
 # importing map file to print land map here
-import Map
+from Map import Map
+# importing map file to print land map here
+from Character import Character
 # things to do
 Actions = {'Quit', 'Places'}
 # directions
@@ -32,7 +34,11 @@ def play():
     print("Right now, you are in Conques, France.")
     print("Please come back here when you find the Rose.")
     # printing the map here
-    Map.land_maps()
+    Maps = Map("Map")
+    print(Maps.printing_map())
+    # printing the characters here
+    characters = Character("Character Names")
+    print(characters.printing_characters())
     # print list of valid actions and the places inside option places
     for action in Actions:
         print(f"- {action}")
