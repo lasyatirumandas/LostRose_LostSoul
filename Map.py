@@ -48,10 +48,10 @@ class Map:
     def printing_map(self):
         """printing the map in the order i want it to be seen"""
         print(f""" {self.print}-
-| Enchanted_forward | Enchanted_right    | Sherwood_forward | Sherwood_right    |
-| Enchanted_left    | Enchanted_backward | Sherwood_left    | Sherwood_backward |
-| starting_point    | Conques_belle      | Beast_forward    |   Beast_right     |
-                                         | Beast_left       | Beast_backward    |
+| Enchanted_forward(EF) | Enchanted_right(ER)    | Sherwood_forward(SF) | Sherwood_right(SR)    |
+| Enchanted_left(EL)    | Enchanted_backward(EB) | Sherwood_left(SL)    | Sherwood_backward(SB) |
+| starting_point(SP)    | Conques_belle(CB)      | Beast_forward(BF)    |   Beast_right(BR)     |
+                                                 | Beast_left(BL)       | Beast_backward(BB)    |
 """)
 
 # calling the fucntion to print the map

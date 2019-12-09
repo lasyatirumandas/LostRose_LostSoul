@@ -3,12 +3,16 @@
 # Dec 2, 2019
 # RPG Class
 
+Keyword = ['EF', 'ER', 'SF', 'SR', 'EL', 'EB', 'SL', 'SB', 'SP', 'CB', 'BF',
+           'BR', 'BL', 'BB'
+           ]
 
- class MapTile:
-     def __init__(self, x, y):
-         self.x = x
-         self.y = x
-         self.Locations
+
+class MapTile:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.Locations
 
 
 class Starting_point(MapTile):
@@ -26,9 +30,17 @@ class Starting_point(MapTile):
         Right now, you are in Conques, France.
         Please come back here when you find the Rose.
         """
+        for Keywords in Keyword:
+            print(f"- {Keywords}")
+        while True:
+            Keyword_input = get_command("Keyword: ")
+            for Keyword_input in Keyword:
+                if Keyword_input == 'EF':
+                    
 
 
-class Enchnated_forward(MapTiles):
+
+class Enchanted_forward(MapTiles):
     def Enchnated_forward(self):
         self.Locations = Enchnated_forward
         return """
