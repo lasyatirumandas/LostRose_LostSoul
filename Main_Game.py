@@ -37,8 +37,8 @@ def play():
     Maps = Map("Maps")
     print(Maps.printing_map())
     # printing the characters here
-    character = characters("Character Names")
-    print(character.printing_characters())
+    characters = Character("Character Names")
+    print(characters.printing_characters())
     # print list of valid actions and the places inside option places
     for action in Actions:
         print(f"- {action}")
@@ -52,15 +52,19 @@ def play():
                 for location in Locations:
                     print(location)
                 locations_inputs()
-        else:
-            print("Invalid action")
+            else:
+                print("Invalid action")
+
 
 
 # defining get command function for player input
 def get_command(message):
     """making the input captial"""
-    action_input = input(message)
-    return action_input.title()
+    try:
+        action_input = input(message)
+        return action_input.title()
+    except NameError:
+        print("You spelled the name wrong. Try again!")
 
 
 def choose_Enchanted_Forest():
@@ -70,30 +74,33 @@ def choose_Enchanted_Forest():
     # Options for direction input and what happens in each direction
     print(Directions)
     while True:
-        direction_input = get_command('What direction?')
-        if direction_input in Directions:
-            print(f"{direction_input.title()}")
-            if direction_input == 'Left':
-                print(f"Moving Left")
-                print("Nothing is here")
-            elif direction_input == 'Right':
-                print(f"Moving Right")
-                print("The orge is sleeping and you will let it sleep.")
-            elif direction_input == 'Forward':
-                print(f"Moving Forward")
-                print("Nothing is here")
-            elif direction_input == 'Backward':
-                print(f"Moving Backward")
-                print(f"You have found the Rose")
-            elif direction_input == 'Quit':
-                sys.exit()
-            elif direction_input == 'Places':
-                for location in Locations:
-                    print(location)
+        try:
+            direction_input = get_command('What direction?')
+            if direction_input in Directions:
+                print(f"{direction_input.title()}")
+                if direction_input == 'Left':
+                    print(f"Moving Left")
+                    print("Nothing is here")
+                elif direction_input == 'Right':
+                    print(f"Moving Right")
+                    print("The orge is sleeping and you will let it sleep.")
+                elif direction_input == 'Forward':
+                    print(f"Moving Forward")
+                    print("Nothing is here")
+                elif direction_input == 'Backward':
+                    print(f"Moving Backward")
+                    print(f"You have found the Rose")
+                elif direction_input == 'Quit':
+                    sys.exit()
+                elif direction_input == 'Places':
+                    for location in Locations:
+                        print(location)
                 # option for place input to go to another place
-                locations_inputs()
-        else:
-            print("Invalid Direction")
+                    locations_inputs()
+            else:
+                print("Invalid Direction")
+        except NameError:
+            print("You spelled the name wrong. Try again!")
 
 
 def choose_Sherwood_Forest():
@@ -122,8 +129,8 @@ def choose_Sherwood_Forest():
                 for location in Locations:
                     print(location)
                 locations_inputs()
-        else:
-            print("Invalid action")
+            else:
+                print("Invalid action")
 
 
 def choose_Conques_France():
@@ -139,49 +146,55 @@ def choose_Conques_France():
     # Options for direction input and what happens in each direction
     print(Directions)
     while True:
-        direction_input = get_command('What direction?')
-        if direction_input in Directions:
-            print(f"{direction_input.title()}")
-            # Left options leads to nothing
-            if direction_input == 'Left':
-                print(f"Moving Left")
-                print("Nothing is here")
-            # this shows what happens when right option
-            elif direction_input == 'Right':
-                print(f"Moving Right")
-                print("You can hear the growls louder and make out a")
-                print("figure from the dark.")
-                print("The beast awakes with the sound of your footsteps.")
-                print("ROBIN: Hey I will deal with him, you go put the Rose.")
-            # this shows what happens when forward option
-            elif direction_input == 'Forward':
-                print(f"Moving Forward")
-                print("You found the case to put the rose before the beast")
-                print("comes closer. The beast restores into human form, now.")
-                print("You did it!!! Success")
-            elif direction_input == 'Quit':
-                sys.exit()
-            # option for place input to go to another place
-            elif direction_input == 'Places':
-                for location in Locations:
-                    print(location)
-                locations_inputs()
-        else:
-            print("Invalid Direction")
+        try:
+            direction_input = get_command('What direction?')
+            if direction_input in Directions:
+                print(f"{direction_input.title()}")
+                # Left options leads to nothing
+                if direction_input == 'Left':
+                    print(f"Moving Left")
+                    print("Nothing is here")
+                # this shows what happens when right option
+                elif direction_input == 'Right':
+                    print(f"Moving Right")
+                    print("You can hear the growls louder and make out a")
+                    print("figure from the dark.")
+                    print("The beast awakes with the sound of your footsteps")
+                    print("ROBIN: I will deal with him, you go put the Rose.")
+                # this shows what happens when forward option
+                elif direction_input == 'Forward':
+                    print(f"Moving Forward")
+                    print("You found the case to put the rose before Beast")
+                    print("comes closer. The beast restores into human form.")
+                    print("You did it!!! Success")
+                elif direction_input == 'Quit':
+                    sys.exit()
+                # option for place input to go to another place
+                elif direction_input == 'Places':
+                    for location in Locations:
+                        print(location)
+                    locations_inputs()
+            else:
+                print("Invalid Direction")
+        except NameError:
+            print("You spelled the name wrong. Try again!")
 
 
 def locations_inputs():
     """This function allows people to input which location they want to go"""
-    location_input = get_command("Location: ")
-    for location_input in Locations:
-        if location_input == 'Enchanted Forest':
-            choose_Enchanted_Forest()
-        elif location_input == 'Sherwood Forest':
-            choose_Sherwood_Forest()
-        elif location_input == 'Conques France':
-            choose_Conques_France()
-        else:
-            print("Invalid action")
+    try:
+        location_input = get_command("Location: ")
+        for location_input in Locations:
+            if location_input == 'Enchanted Forest':
+                choose_Enchanted_Forest()
+            elif location_input == 'Sherwood Forest':
+                choose_Sherwood_Forest()
+            elif location_input == 'Conques France':
+                choose_Conques_France()
+            else:
+                print("Invalid action")
+    except NameError:
+        print("You spelled the name wrong. Try again!")
 
 
 # Calling the function play to play the game
