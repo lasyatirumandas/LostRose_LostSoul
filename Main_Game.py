@@ -60,6 +60,7 @@ def play():
 # defining get command function for player input
 def get_command(message):
     """making the input captial"""
+    # making a try-except statement to be error-free 
     try:
         action_input = input(message)
         return action_input.title()
@@ -74,6 +75,7 @@ def choose_Enchanted_Forest():
     # Options for direction input and what happens in each direction
     print(Directions)
     while True:
+        # making a try-except statement to be error-free 
         try:
             direction_input = get_command('What direction?')
             if direction_input in Directions:
@@ -146,6 +148,7 @@ def choose_Conques_France():
     # Options for direction input and what happens in each direction
     print(Directions)
     while True:
+        # making a try-except statement to be error-free 
         try:
             direction_input = get_command('What direction?')
             if direction_input in Directions:
@@ -182,6 +185,7 @@ def choose_Conques_France():
 
 def locations_inputs():
     """This function allows people to input which location they want to go"""
+    # making a try-except statement to be error-free 
     try:
         location_input = get_command("Location: ")
         for location_input in Locations:
