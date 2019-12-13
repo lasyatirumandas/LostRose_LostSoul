@@ -51,7 +51,7 @@ class Map:
 | Enchanted_forward(EF) | Enchanted_right(ER)    | Sherwood_forward(SF) | Sherwood_right(SR)    |
 | Enchanted_left(EL)    | Enchanted_backward(EB) | Sherwood_left(SL)    | Sherwood_backward(SB) |
 | starting_point(SP)    | Conques_belle(CB)      | Beast_forward(BF)    |   Beast_right(BR)     |
-                                                 | Beast_left(BL)       | Beast_backward(BB)    |
+                                                 | Beast_left(BL)       | 
 """)
 
 # calling the fucntion to print the map
