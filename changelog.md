@@ -1,4 +1,4 @@
-# Lost Rose Lost Soul changelog
+# Fairy Tales changelog
 
 ###### Prerelease version
 - Create a game file
