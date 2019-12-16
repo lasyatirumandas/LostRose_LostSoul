@@ -101,4 +101,30 @@
                 # PRINT you did it!!! success- game ends
 
 # RAPUNZEL AND FAMILY
-#
+# Introducing Rapunzel and her backstory(user input)
+    # You come along and say "Anyone There?"
+    # She hears and sees you, a conversation arises between the two
+    # she tells you about wanting to find her parents and you say Yes
+    # she swings down the tower by her hair and they start the journey
+
+# walking along, you find a tavern- conversation between the two about going
+    # in or not(user input)
+# finally convinces rapunzel to go into the tavern
+    # theres viking thugs and you inform them about your search and dream
+    # They tell you each others dreams
+    # then they show you a picture
+    # she tells them that this is her and that means those are her parents
+    # thugs tell her that her parents are queen arianna and king frederic
+    # she asks them where they are and thugs say corona but they don't know
+        # how to get their
+    # they thank thugs and move on
+
+# walking alone they find a store and you are hungry
+# you go into the store while she stays outside
+# you buy something(user input) and find a map of corona
+# you call her and show it to her
+# both come out and follow the map(MAP)
+
+# following the map they find the king and the queen
+# she shows them the picture and explains what happened to her
+# the parents believe her and they reunite
