@@ -6,7 +6,7 @@
 
 # user input to pick which game they would ather play- Beast or Rapunzel
 
-BELLE AND THE BEAST
+# BELLE AND THE BEAST
 # Introducing Belle and her problem about the lost rose and the beast
     # PRINT belle talking about her problem and asks you for help
     # PRINT belle talkin about the rose and love that it represents in beast
@@ -100,5 +100,5 @@ BELLE AND THE BEAST
                 # PRINT the beast is restore into human form
                 # PRINT you did it!!! success- game ends
 
-RAPUNZEL AND FAMILY
+# RAPUNZEL AND FAMILY
 #
