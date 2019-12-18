@@ -4,7 +4,8 @@
 # RPG Class
 
 Keyword = ['EF', 'ER', 'SF', 'SR', 'EL', 'EB', 'SL', 'SB', 'CB']
-Beast = ['BF','BR', 'BL']
+Beast = ['BF', 'BR', 'BL']
+
 
 def tiles_moving():
     """The function to show how to move from one place to another"""
@@ -14,7 +15,7 @@ def tiles_moving():
         Keyword_input = get_command("Keyword: ")
         for Keyword_input in Keyword:
             if Keyword_input == 'EF':
-                MapTile = EF('Forward')
+                MapTile = EF()
                 print(MapTile.Enchanted_forward())
             elif Keyword_input == 'ER':
                 MapTile = ER('Right')
@@ -64,10 +65,10 @@ def get_command(message):
     Keyword_input = input(message)
     return Keyword_input.title()
 
-class MapTiles:
-    def __init__(self, locations):
-        self.locations = locations
 
+class MapTiles:
+    def __init__(self):
+        self.locations = locations
 
     def Starting_Point(self):
         print(f""" {self.locations}.
@@ -82,13 +83,15 @@ class MapTiles:
         Right now, you are in Conques, France.
         Please come back here when you find the Rose.""")
 
+
 class EF(MapTiles):
-    def __init__(self, locations):
-        self.locations = locations
+    def __init__(self):
+        self.locations = "Forward"
 
     def Enchanted_forward(self):
         print(f""" Going {self.locations}.
         There is nothing here.""")
+
 
 class ER(MapTiles):
     def __init__(self, locations):
@@ -121,6 +124,7 @@ class EB(MapTiles):
 class SF(MapTiles):
     def __init__(self, locations):
         self.locations = locations
+
     def Sherwood_forward(self):
         print(f""" Going {self.locations}.
         There is nothing here.""")
