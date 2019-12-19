@@ -3,6 +3,7 @@
 # Dec 2, 2019
 # RPG Class
 
+# list of places to move to
 Keyword = ['EF', 'ER', 'SF', 'SR', 'EL', 'EB', 'SL', 'SB', 'CB']
 Beast = ['BF', 'BR', 'BL']
 
@@ -12,48 +13,50 @@ def tiles_moving():
     for Keywords in Keyword:
         print(f"- {Keywords}")
     while True:
+        # input for the keyword list
         Keyword_input = get_command("Keyword: ")
         for Keyword_input in Keyword:
             if Keyword_input == 'EF':
-                MapTile = EF()
-                print(MapTile.Enchanted_forward())
+                MapTile1 = MapTiles('Forward')
+                print(MapTile1.Enchanted_forward())
             elif Keyword_input == 'ER':
-                MapTile = ER('Right')
-                print(MapTile.Enchanted_right())
+                MapTile2 = MapTiles('Right')
+                print(MapTile2.Enchanted_right())
             elif Keyword_input == 'SF':
-                MapTile = SF('Forward')
-                print(MapTile.Sherwood_forward())
+                MapTile3 = MapTiles('Forward')
+                print(MapTile3.Sherwood_forward())
             elif Keyword_input == 'SR':
-                MapTile = SR('Right')
-                print(MapTile.Sherwood_right())
+                MapTile4 = MapTiles('Right')
+                print(MapTile4.Sherwood_right())
             elif Keyword_input == 'EL':
-                MapTile = EL('Left')
-                print(MapTile.Enchanted_left())
+                MapTile5 = MapTiles('Left')
+                print(MapTile5.Enchanted_left())
             elif Keyword_input == 'EB':
-                MapTile = EB('Backward')
-                print(MapTile.Enchanted_backward())
+                MapTile6 = MapTiles('Backward')
+                print(MapTile6.Enchanted_backward())
             elif Keyword_input == 'SL':
-                MapTile = SL('Left')
-                print(MapTile.Sherwood_left())
+                MapTile7 = MapTiles('Left')
+                print(MapTile7.Sherwood_left())
             elif Keyword_input == 'SB':
-                MapTile = SB('Backward')
-                print(MapTile.Sherwood_backward())
+                MapTile8 = MapTiles('Backward')
+                print(MapTile8.Sherwood_backward())
             elif Keyword_input == 'CB':
-                MapTile = CB('Belle')
-                print(MapTile.Conques_belle())
+                MapTile9 = MapTiles('Belle')
+                print(MapTile9.Conques_belle())
                 for Beasts in Beast:
                     print(f"- {Beasts}")
+                # input for the beast list and the beast room
                 Beast_room_input = get_command("Keyword: ")
                 for Beast_room_input in Beast:
                     if Beast_room_input == 'BF':
-                        MapTile = BF('Forward')
-                        print(MapTile.Beast_forward())
+                        Tile1 = MapTiles('Forward')
+                        print(Tile1.Beast_forward())
                     elif Beast_room_input == 'BR':
-                        MapTile = BR('Right')
-                        print(MapTile.Beast_right())
+                        Tile2 = MapTiles('Right')
+                        print(Tile2.Beast_right())
                     elif Beast_room_input == 'BL':
-                        MapTile = BL('Left')
-                        print(MapTile.Beast_left())
+                        Tile3 = MapTiles('Left')
+                        print(Tile3.Beast_left())
                     else:
                         print("Invalid Direction")
             else:
@@ -66,93 +69,64 @@ def get_command(message):
     return Keyword_input.title()
 
 
+def Starting_Point(self):
+    """This is the starting point"""
+    print(f""" {self.locations}.
+    Hi! I am Belle. The love of my life has been a Beast and will stay
+    as a Beast if you don't find the Rose, which will restore him into
+    a charming Prince, that he was once.
+    And You will help me restore my Beast.
+    There are three places that you can visit and in one of these
+    places, you will find the Rose.
+    I have already informed Robin Hood about your arrival and he
+    will be waiting for you in Sherwood Forest.
+    Right now, you are in Conques, France.
+    Please come back here when you find the Rose.""")
+
+
 class MapTiles:
-    def __init__(self):
-        self.locations = locations
-
-    def Starting_Point(self):
-        print(f""" {self.locations}.
-        Hi! I am Belle. The love of my life has been a Beast and will stay
-        as a Beast if you don't find the Rose, which will restore him into
-        a charming Prince, that he was once.
-        And You will help me restore my Beast.
-        There are three places that you can visit and in one of these
-        places, you will find the Rose.
-        I have already informed Robin Hood about your arrival and he
-        will be waiting for you in Sherwood Forest.
-        Right now, you are in Conques, France.
-        Please come back here when you find the Rose.""")
-
-
-class EF(MapTiles):
-    def __init__(self):
-        self.locations = "Forward"
-
-    def Enchanted_forward(self):
-        print(f""" Going {self.locations}.
-        There is nothing here.""")
-
-
-class ER(MapTiles):
+    """This is the class for the different locations in the game"""
     def __init__(self, locations):
         self.locations = locations
 
+    def Enchanted_forward(self):
+        """This is the function for Enchanted_forward tile"""
+        print(f""" Going {self.locations}.
+        There is nothing here.""")
+
     def Enchanted_right(self):
+        """This is the function for Enchanted_right tile"""
         print(f""" Going {self.locations}.
         The orge is sleeping and you will let it sleep.
         """)
 
-
-class EL(MapTiles):
-    def __init__(self, locations):
-        self.locations = locations
-
     def Enchanted_left(self):
+        """This is the function for Enchanted_left tile"""
         print(f""" Going {self.locations}.
         There is nothing here.""")
-
-
-class EB(MapTiles):
-    def __init__(self, locations):
-        self.locations = locations
 
     def Enchanted_backward(self):
+        """This is the function for Enchanted_backward tile"""
         print(f""" Going {self.locations}.
         There is nothing here.""")
-
-
-class SF(MapTiles):
-    def __init__(self, locations):
-        self.locations = locations
 
     def Sherwood_forward(self):
+        """This is the function for Sherwood_forward tile"""
         print(f""" Going {self.locations}.
         There is nothing here.""")
-
-
-class SR(MapTiles):
-    def __init__(self, locations):
-        self.locations = locations
 
     def Sherwood_right(self):
+        """This is the function for Sherwood_right tile"""
         print(f""" Going {self.locations}.
         There is nothing here.""")
-
-
-class SB(MapTiles):
-    def __init__(self, locations):
-        self.locations = locations
 
     def Sherwood_backward(self):
+        """This is the function for Sherwood_backward tile"""
         print(f""" Going {self.locations}.
         There is nothing here.""")
 
-
-class SL(MapTiles):
-    def __init__(self, locations):
-        self.locations = locations
-
     def Sherwood_left(self):
+        """This is the function for Sherwood_left tile"""
         print(f""" Going {self.locations}.
         You are in the Sherwood forest and Robin Hood greets you.
         Robin Hood and you have become alliances in this adventure.
@@ -167,12 +141,8 @@ class SL(MapTiles):
         ROBIN: Let's go to the Enchanted Forest.
         """)
 
-
-class CB(MapTiles):
-    def __init__(self, locations):
-        self.locations = locations
-
     def Conques_belle(self):
+        """This is the function for Conques_belle tile"""
         print(f""" Going {self.locations}.
         You are in France.
         BELLE: Did you find the rose?
@@ -184,23 +154,15 @@ class CB(MapTiles):
         This is the Beast room.
         """)
 
-
-class BF(MapTiles):
-    def __init__(self, locations):
-        self.locations = locations
-
     def Beast_forward(self):
+        """This is the function for Beast_forward tile"""
         print(f""" Going {self.locations}.
         You found the case to put the rose before the beast
         comes closer. The beast restores into human form, now.
         """)
 
-
-class BR(MapTiles):
-    def __init__(self, locations):
-        self.locations = locations
-
     def Beast_right(self):
+        """This is the function for Beast_right tile"""
         print(f""" Going {self.locations}.
         You can hear the growls louder and make out a
         figure from the dark.
@@ -208,12 +170,8 @@ class BR(MapTiles):
         ROBIN: Hey I will deal with him, you go put the Rose.
         """)
 
-
-class BL(MapTiles):
-    def __init__(self, locations):
-        self.locations = locations
-
     def Beast_left(self):
+        """This is the function for Beast_left tile"""
         print(f""" Going {self.locations}.
         There is nothing here.""")
 
