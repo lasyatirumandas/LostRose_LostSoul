@@ -15,52 +15,51 @@ def tiles_moving():
     while True:
         # input for the keyword list
         Keyword_input = get_command("Keyword: ")
-        for Keyword_input in Keyword:
-            if Keyword_input == 'EF':
-                MapTile1 = MapTiles('Forward')
-                print(MapTile1.Enchanted_forward())
-            elif Keyword_input == 'ER':
-                MapTile2 = MapTiles('Right')
-                print(MapTile2.Enchanted_right())
-            elif Keyword_input == 'SF':
-                MapTile3 = MapTiles('Forward')
-                print(MapTile3.Sherwood_forward())
-            elif Keyword_input == 'SR':
-                MapTile4 = MapTiles('Right')
-                print(MapTile4.Sherwood_right())
-            elif Keyword_input == 'EL':
-                MapTile5 = MapTiles('Left')
-                print(MapTile5.Enchanted_left())
-            elif Keyword_input == 'EB':
-                MapTile6 = MapTiles('Backward')
-                print(MapTile6.Enchanted_backward())
-            elif Keyword_input == 'SL':
-                MapTile7 = MapTiles('Left')
-                print(MapTile7.Sherwood_left())
-            elif Keyword_input == 'SB':
-                MapTile8 = MapTiles('Backward')
-                print(MapTile8.Sherwood_backward())
-            elif Keyword_input == 'CB':
-                MapTile9 = MapTiles('Belle')
-                print(MapTile9.Conques_belle())
-                for Beasts in Beast:
-                    print(f"- {Beasts}")
-                # input for the beast list and the beast room
-                Beast_room_input = get_command("Keyword: ")
-                for Beast_room_input in Beast:
-                    if Beast_room_input == 'BF':
-                        Tile1 = MapTiles('Forward')
-                        print(Tile1.Beast_forward())
-                    elif Beast_room_input == 'BR':
-                        Tile2 = MapTiles('Right')
-                        print(Tile2.Beast_right())
-                    elif Beast_room_input == 'BL':
-                        Tile3 = MapTiles('Left')
-                        print(Tile3.Beast_left())
-                    else:
-                        print("Invalid Direction")
-            else:
-                print("Invalid Direction")
+        if Keyword_input == 'EF':
+            MapTile = MapTiles('Forward')
+            print(MapTile.Enchanted_forward())
+        elif Keyword_input == 'ER':
+            MapTile = MapTiles('Right')
+            print(MapTile.Enchanted_right())
+        elif Keyword_input == 'SF':
+            MapTile = MapTiles('Forward')
+            print(MapTile.Sherwood_forward())
+        elif Keyword_input == 'SR':
+            MapTile = MapTiles('Right')
+            print(MapTile.Sherwood_right())
+        elif Keyword_input == 'EL':
+            MapTile = MapTiles('Left')
+            print(MapTile.Enchanted_left())
+        elif Keyword_input == 'EB':
+            MapTile = MapTiles('Backward')
+            print(MapTile.Enchanted_backward())
+        elif Keyword_input == 'SL':
+            MapTile = MapTiles('Left')
+            print(MapTile.Sherwood_left())
+        elif Keyword_input == 'SB':
+            MapTile = MapTiles('Backward')
+            print(MapTile.Sherwood_backward())
+        elif Keyword_input == 'CB':
+            MapTile = MapTiles('Belle')
+            print(MapTile.Conques_belle())
+            for Beasts in Beast:
+                print(f"- {Beasts}")
+            # input for the beast list and the beast room
+            Beast_room_input = get_command("Keyword: ")
+            for Beast_room_input in Beast:
+                if Beast_room_input == 'BF':
+                    MapTile = MapTiles('Forward')
+                    print(MapTile.Beast_forward())
+                elif Beast_room_input == 'BR':
+                    MapTile = MapTiles('Right')
+                    print(MapTile.Beast_right())
+                elif Beast_room_input == 'BL':
+                    MapTile = MapTiles('Left')
+                    print(MapTile.Beast_left())
+                else:
+                    print("Invalid Direction")
+        else:
+            print("Invalid Direction")
 
 
 def get_command(message):
