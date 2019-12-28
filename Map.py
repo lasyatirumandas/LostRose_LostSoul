@@ -57,3 +57,22 @@ class Map:
 # calling the fucntion to print the map
 Maps = Map("Map")
 print(Maps.printing_map())
+
+class Map1:
+    """Create a map using class for corona"""
+    def __init__(self, prints):
+        """printing the map"""
+        self.prints = prints
+        
+    def printing_maps(self):
+        """printing the map in the order I want to see it"""
+        print(f""" {self.prints}-
+|           Market                  ||||||||||
+|      Church       ||||||||||||||||||||||||||
+|                     Homes                  |
+|                     Homes                  |
+""")
+
+# calling the function to print the map
+Mapss = Map1("Corona Map")
+print(Mapss.printing_maps())
