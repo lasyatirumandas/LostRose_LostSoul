@@ -1,3 +1,4 @@
+from Map import Map1
 
 # Pick an input for 'anyone there'
 Input1 = ['Anyone there?', 'Can anyone hear me?']
@@ -83,18 +84,19 @@ def play1():
                                                        Queen Arianna.
                                              RAPUNZEL: What?! I'm a PRINCESS!
                                                        How do we go there?
-                                             VIKING 2: I wish we could help
-                                                       you, but we don't
-                                                       know. """)
+                                             VIKING 2: Keep going straight 
+                                                       and you will see a 
+                                                       bridge. You have to 
+                                                       cross the bridge to
+                                                       get to Corona.""")
                                     print("""And so you and Rapunzel came out
                                           of the tavern and continued on
-                                          their path.""")
-                                    print("""Walking alone in the middle of the
-                                          forest, you and Rapunzel have been
-                                          looking around for clues, but there's
-                                          nonthing."""
-                                    for Inputs5 in Input5:
-                                        print(f"- Inputs")
-                                    answer_input = get_command("Response: ")
-                                    for answer_input in Input5:
-                                        if answer_input ==
+                                          their path.
+                                          After o long, you see the bridge 
+                                          and you and Rapunzel cross the bidge.
+                                          """)
+                                    # printing the map here
+                                    Mapss = Map1("Corona Map")
+                                    print(Mapss.printing_maps())
+
+                                    
