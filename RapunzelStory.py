@@ -1,13 +1,15 @@
 from Map import Map1
+import sys
 
 # Pick an input for 'anyone there'
-Input1 = ['Anyone there?', 'Can anyone hear me?']
-Input2 = ['I will help you, come down.', 'We can find them together']
-Input3 = ["Come on let's go in", "You never know, come on."]
+Input1 = ['Anyone there?', 'Can anyone hear me?', 'exit']
+Input2 = ["I will help you, come down.", "We can find them together",
+          "exit"]
+Input3 = ["Come on let's go in", "You never know, come on.", "exit"]
 Input4 = ['Yess we did it Rapunzel!! Where can we find them?',
-          'Perfect! where do they live?']
+          'Perfect! where do they live?', 'exit']
 Input5 = ["Hey! There's a store and I'm going to go to buy food, come along?",
-          "Rpaunzel, come on! Let's go get food"]
+          "Rpaunzel, come on! Let's go get food", "exit"]
 
 def play1():
     """Game play for the Rapunzel story"""
@@ -30,6 +32,10 @@ def play1():
                             You might wonder why and I wish I could tell
                             you, but I don't know. I really want to find
                             my parents, though. I have never seem them.""")
+        elif answer_input == 'Quit':
+             sys.exit()
+        else:
+             print("Invalid Action")
             for Inputs2 in Input2:
                 print(f"- Inputs")
             answer_input = get_command("Response: ")
@@ -42,6 +48,10 @@ def play1():
                           Walking along a path, both of you look around to
                           find clues. You find a Tavern and ask Rapunzel to
                           come in with you.""")
+                elif answer_input == 'Quit':
+                    sys.exit()
+                else:
+                    print("Invalid Action")
                     for Inputs3 in Input3:
                         print(f"- Inputs")
                     answer_input = get_command("Response: ")
@@ -71,6 +81,10 @@ def play1():
                                   who looks stunned.
                                   VIKING 2: Is this it?
                                   Rapunzel: Ya! This is it!! That is me.""")
+                         elif answer_input == 'Quit':
+                             sys.exit()
+                         else:
+                             print("Invalid Action")
                             for Inputs4 in Input4:
                                 print(f"- Inputs")
                             answer_input = get_command("Response: ")
@@ -95,6 +109,10 @@ def play1():
                                           After o long, you see the bridge 
                                           and you and Rapunzel cross the bidge.
                                           """)
+                                  elif answer_input == 'Quit':
+                                      sys.exit()
+                                  else:
+                                      print("Invalid Action")
                                     # printing the map here
                                     Mapss = Map1("Corona Map")
                                     print(Mapss.printing_maps())
