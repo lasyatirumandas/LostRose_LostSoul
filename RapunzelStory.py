@@ -105,7 +105,7 @@ def play1():
                             You might wonder why and I wish I could tell
                             you, but I don't know. I really want to find
                             my parents, though. I have never seem them.""")
-            # input when talking to rapunzel
+            # input for talking to rapunzel
             for Inputs2 in Input2:
                 print(f"Inputs: {Inputs2}")
             answer_input = get_command("Response: ")
