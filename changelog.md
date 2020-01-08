@@ -17,5 +17,10 @@
 ###### Version 3
 - Change Name of the game
 - Expand the game
-  - Create another fairy tale(Rapunzel)
-  - Create so player can pick which fairytale to play
+    - Create another fairy tale(Rapunzel)
+    - Create so player can pick which fairytale to play
+
+###### Version 4
+- Change the Name of game
+- Combine rapunzel and belle story together
+    - Create so player can pick which fairytale to play
