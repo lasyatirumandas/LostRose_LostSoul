@@ -37,8 +37,8 @@
 #             [Nothing_Space1(0, 1), Nothing_Space2(1, 1), Beast_left(2, 1),
 #              Beast_backward(3, 1)]
 #             ]
-#
-#
+
+
 class Map:
     """create a map using class"""
     def __init__(self, print):
@@ -57,7 +57,6 @@ class Map:
 # calling the fucntion to print the map
 # Maps = Map("Map")
 # Maps.printing_map()
-
 
 
 class Map1:
