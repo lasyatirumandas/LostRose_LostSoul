@@ -4,73 +4,15 @@
 # RPG Class
 
 # list of places to move to
-Keyword = ['EF', 'ER', 'SF', 'SR', 'EL', 'EB', 'SL', 'SB', 'CB']
+Keyword = ['EF', 'ER', 'SF', 'SR', 'EL', 'EB', 'SL', 'SB']
 Beast = ['BF', 'BR', 'BL']
+Speacial_room = ['CB']
 
 
 def tiles_moving():
     """The function to show how to move from one place to another"""
-    for Keywords in Keyword:
-        print(f"- {Keywords}")
-    while True:
-        # input for the keyword list
-        Keyword_input = get_command("Keyword: ")
-        if Keyword_input == 'EF':
-            MapTile = MapTiles('Forward')
-            print(MapTile.Enchanted_forward())
-        elif Keyword_input == 'ER':
-            MapTile = MapTiles('Right')
-            print(MapTile.Enchanted_right())
-        elif Keyword_input == 'SF':
-            MapTile = MapTiles('Forward')
-            print(MapTile.Sherwood_forward())
-        elif Keyword_input == 'SR':
-            MapTile = MapTiles('Right')
-            print(MapTile.Sherwood_right())
-        elif Keyword_input == 'EL':
-            MapTile = MapTiles('Left')
-            print(MapTile.Enchanted_left())
-        elif Keyword_input == 'EB':
-            MapTile = MapTiles('Backward')
-            print(MapTile.Enchanted_backward())
-        elif Keyword_input == 'SL':
-            MapTile = MapTiles('Left')
-            print(MapTile.Sherwood_left())
-        elif Keyword_input == 'SB':
-            MapTile = MapTiles('Backward')
-            print(MapTile.Sherwood_backward())
-        elif Keyword_input == 'CB':
-            MapTile = MapTiles('Belle')
-            print(MapTile.Conques_belle())
-            for Beasts in Beast:
-                print(f"- {Beasts}")
-            # input for the beast list and the beast room
-            Beast_room_input = get_command("Keyword: ")
-            for Beast_room_input in Beast:
-                if Beast_room_input == 'BF':
-                    MapTile = MapTiles('Forward')
-                    print(MapTile.Beast_forward())
-                elif Beast_room_input == 'BR':
-                    MapTile = MapTiles('Right')
-                    print(MapTile.Beast_right())
-                elif Beast_room_input == 'BL':
-                    MapTile = MapTiles('Left')
-                    print(MapTile.Beast_left())
-                else:
-                    print("Invalid Direction")
-        else:
-            print("Invalid Direction")
-
-
-def get_command(message):
-    """making the input captial"""
-    Keyword_input = input(message)
-    return Keyword_input.title()
-
-
-def Starting_Point(self):
-    """This is the starting point"""
-    print(f""" {self.locations}.
+    # printing the intro and the starting point
+    print("""Lost Rose, Lost Soul
     Hi! I am Belle. The love of my life has been a Beast and will stay
     as a Beast if you don't find the Rose, which will restore him into
     a charming Prince, that he was once.
@@ -81,6 +23,76 @@ def Starting_Point(self):
     will be waiting for you in Sherwood Forest.
     Right now, you are in Conques, France.
     Please come back here when you find the Rose.""")
+    for Keywords in Keyword:
+        print(f"- {Keywords}")
+    while True:
+        # input for the keyword list
+        Keyword_input = get_command("Keyword: ")
+        try:
+            if Keyword_input == 'EF':
+                MapTile = MapTiles('Forward')
+                MapTile.Enchanted_forward()
+            elif Keyword_input == 'ER':
+                MapTile = MapTiles('Right')
+                MapTile.Enchanted_right()
+            elif Keyword_input == 'SF':
+                MapTile = MapTiles('Forward')
+                MapTile.Sherwood_forward()
+            elif Keyword_input == 'SR':
+                MapTile = MapTiles('Right')
+                MapTile.Sherwood_right()
+            elif Keyword_input == 'EL':
+                MapTile = MapTiles('Left')
+                MapTile.Enchanted_left()
+            elif Keyword_input == 'EB':
+                MapTile = MapTiles('Backward')
+                MapTile.Enchanted_backward()
+                for Speacial_rooms in Speacial_room:
+                    print(f"- {Speacial_rooms}")
+                # input for the CB
+                Speacial_rooms_input = get_command("Place: ")
+                if Speacial_rooms_input == 'CB':
+                    MapTile = MapTiles('Belle')
+                    MapTile.Conques_belle()
+                    for Beasts in Beast:
+                        print(f"- {Beasts}")
+                    # input for the beast list and the beast room
+                    Beast_room_input = get_command("Keyword: ")
+                    if Beast_room_input == 'BF':
+                        MapTile = MapTiles('Forward')
+                        MapTile.Beast_forward()
+                        break
+                    elif Beast_room_input == 'BR':
+                        MapTile = MapTiles('Right')
+                        MapTile.Beast_right()
+                    elif Beast_room_input == 'BL':
+                        MapTile = MapTiles('Left')
+                        MapTile.Beast_left()
+                    else:
+                        print("Invalid Direction")
+            elif Keyword_input == 'SL':
+                MapTile = MapTiles('Left')
+                MapTile.Sherwood_left()
+            elif Keyword_input == 'SB':
+                MapTile = MapTiles('Backward')
+                MapTile.Sherwood_backward()
+            else:
+                print("Invalid Direction")
+        except:
+            print("Invalid input")
+
+
+def get_command(message):
+    """making the input captial"""
+    try:
+        Keyword_input = input(message)
+        return Keyword_input
+        Beast_room_input = input(message)
+        return Beast_room_input
+        Speacial_rooms_input = input(message)
+        return Speacial_rooms_input
+    except NameError:
+        print("You spelled the name wrong. Try again!")
 
 
 class MapTiles:
@@ -175,4 +187,5 @@ class MapTiles:
         There is nothing here.""")
 
 
+# call the function to execute the game
 tiles_moving()

@@ -37,8 +37,8 @@
 #             [Nothing_Space1(0, 1), Nothing_Space2(1, 1), Beast_left(2, 1),
 #              Beast_backward(3, 1)]
 #             ]
-
-
+#
+#
 class Map:
     """create a map using class"""
     def __init__(self, print):
@@ -51,9 +51,30 @@ class Map:
 | Enchanted_forward(EF) | Enchanted_right(ER)    | Sherwood_forward(SF) | Sherwood_right(SR)    |
 | Enchanted_left(EL)    | Enchanted_backward(EB) | Sherwood_left(SL)    | Sherwood_backward(SB) |
 | starting_point(SP)    | Conques_belle(CB)      | Beast_forward(BF)    |   Beast_right(BR)     |
-                                                 | Beast_left(BL)       | 
-""")
+                                                 | Beast_left(BL)       |
+# """)
 
 # calling the fucntion to print the map
-Maps = Map("Map")
-print(Maps.printing_map())
+# Maps = Map("Map")
+# Maps.printing_map()
+
+
+
+class Map1:
+    """Create a map using class for corona"""
+    def __init__(self, prints):
+        """printing the map"""
+        self.prints = prints
+
+    def printing_maps(self):
+        """printing the map in the order I want to see it"""
+        print(f"""{self.prints}
+|           Market                  ||||||||||
+|      Church       ||||||||||||||||||||||||||
+|                     Old Homes                  |
+|                     New Homes                  |
+""")
+
+# #calling the function to print the map
+# Mapss = Map1("Corona Map")
+# Mapss.printing_maps()

@@ -32,5 +32,5 @@ class Character:
 """)
 
 # calling the fucntion to print the character names
-characters = Character("Character Names")
-print(characters.printing_characters())
+# characters = Character("Character Names")
+# characters.printing_characters()
