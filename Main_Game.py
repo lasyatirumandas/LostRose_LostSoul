@@ -178,18 +178,18 @@ def choose_Conques_France():
             print("You spelled the name wrong. Try again!")
 
 
-def game_choice():
-    """Input for picking a Game"""
-    for Game in Games:
-        print(f"- {Game}")
-        while True:
-            game_input = get_command("Game: ")
-            for game_input in Games:
-                if game_input == 'Beauty and the Beast':
-                    play()
-                elif game_input == 'Tangled':
-                    play1()
-                else:
-                    print("Invalid Input")
+#def game_choice():
+    #"""Input for picking a Game"""
+    #for Game in Games:
+        #print(f"- {Game}")
+        #while True:
+            #game_input = get_command("Game: ")
+            #for game_input in Games:
+                #if game_input == 'Beauty and the Beast':
+                    #play()
+                #elif game_input == 'Tangled':
+                    #play1()
+                #else:
+                    #print("Invalid Input")
 
-game_choice()
+#game_choice()
