@@ -21,19 +21,6 @@ Directions = ['Left', 'Right', 'Forward', 'Backward', 'Quit', 'Places']
 Locations = ['Enchanted Forest', 'Sherwood Forest', 'Conques France']
 
 
-# defining get command function for player input
-def get_command(message):
-    """making the input captial"""
-    # making a try-except statement to be error-free
-    try:
-        action_input = input(message)
-        return action_input.title()
-        game_input = input(message)
-        return game_input.title()
-    except NameError:
-        print("You spelled the name wrong. Try again!")
-
-
 def play():
     """Function for the Introduction of the game"""
     # print the title
@@ -52,24 +39,35 @@ def play():
     print("Please come back here when you find the Rose.")
     # printing the map here
     Maps = Map("Maps")
-    print(Maps.printing_map())
+    Maps.printing_map()
     # printing the characters here
     characters = Character("Character Names")
-    print(characters.printing_characters())
-    print(Directions[0])
+    characters.printing_characters()
     # print list of valid actions and the places inside option places
     for action in Actions:
         print(f"- {action}")
     while True:
         action_input = get_command("Action: ")
-        for action_input in Actions:
-            if action_input == 'Quit':
-                sys.exit()
-            # option for place input to go to another place
-            elif action_input == 'Places':
-                Classes.tiles_moving()
-            else:
-                print("Invalid action")
+        if action_input == 'Quit':
+            sys.exit()
+        # option for place input to go to another place
+        elif action_input == 'Places':
+            Classes.tiles_moving()
+        else:
+            print("Invalid action")
+
+
+# defining get command function for player input
+def get_command(message):
+    """making the input captial"""
+    # making a try-except statement to be error-free
+    try:
+        action_input = input(message)
+        return action_input.title()
+        game_input = input(message)
+        return game_input.title()
+    except NameError:
+        print("You spelled the name wrong. Try again!")
 
 
 def choose_Enchanted_Forest():
@@ -125,14 +123,13 @@ def choose_Sherwood_Forest():
         print(f"- {action}")
     while True:
         action_input = get_command("Action: ")
-        for action_input in Actions:
-            if action_input == 'Quit':
-                sys.exit()
-            # option for place input to go to another place
-            elif action_input == 'Places':
-                Classes.tiles_moving()
-            else:
-                print("Invalid action")
+        if action_input == 'Quit':
+            sys.exit()
+        # option for place input to go to another place
+        elif action_input == 'Places':
+            Classes.tiles_moving()
+        else:
+            print("Invalid action")
 
 
 def choose_Conques_France():
@@ -181,18 +178,18 @@ def choose_Conques_France():
             print("You spelled the name wrong. Try again!")
 
 
-# def game_choice():
-#     """Input for picking a Game"""
-#     for Game in Games:
-#         print(f"- {Game}")
-#         while True:
-#             game_input = get_command("Game: ")
-#             for game_input in Games:
-#                 if game_input == 'Beauty and the Beast':
-#                     play()
-#                 elif game_input == 'Tangled':
-#                     play1()
-#                 else:
-#                     print("Invalid Input")
-#
-# game_choice()
+def game_choice():
+    """Input for picking a Game"""
+    for Game in Games:
+        print(f"- {Game}")
+        while True:
+            game_input = get_command("Game: ")
+            for game_input in Games:
+                if game_input == 'Beauty and the Beast':
+                    play()
+                elif game_input == 'Tangled':
+                    play1()
+                else:
+                    print("Invalid Input")
+
+game_choice()
