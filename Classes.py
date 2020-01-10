@@ -11,18 +11,6 @@ Speacial_room = ['CB']
 
 def tiles_moving():
     """The function to show how to move from one place to another"""
-    # printing the intro and the starting point
-    print("""Lost Rose, Lost Soul
-    Hi! I am Belle. The love of my life has been a Beast and will stay
-    as a Beast if you don't find the Rose, which will restore him into
-    a charming Prince, that he was once.
-    And You will help me restore my Beast.
-    There are three places that you can visit and in one of these
-    places, you will find the Rose.
-    I have already informed Robin Hood about your arrival and he
-    will be waiting for you in Sherwood Forest.
-    Right now, you are in Conques, France.
-    Please come back here when you find the Rose.""")
     for Keywords in Keyword:
         print(f"- {Keywords}")
     while True:
@@ -119,7 +107,7 @@ class MapTiles:
     def Enchanted_backward(self):
         """This is the function for Enchanted_backward tile"""
         print(f""" Going {self.locations}.
-        There is nothing here.""")
+        You found the rose.""")
 
     def Sherwood_forward(self):
         """This is the function for Sherwood_forward tile"""
@@ -139,7 +127,7 @@ class MapTiles:
     def Sherwood_left(self):
         """This is the function for Sherwood_left tile"""
         print(f""" Going {self.locations}.
-        You are in the Sherwood forest and Robin Hood greets you.
+        Robin Hood greets you.
         Robin Hood and you have become alliances in this adventure.
         ROBIN: I heard from Belle that you need assistance with something
         and I will help you hold off the beast and I am willing to come
@@ -170,6 +158,7 @@ class MapTiles:
         print(f""" Going {self.locations}.
         You found the case to put the rose before the beast
         comes closer. The beast restores into human form, now.
+                        The End!!
         """)
 
     def Beast_right(self):
@@ -188,4 +177,4 @@ class MapTiles:
 
 
 # call the function to execute the game
-tiles_moving()
+# tiles_moving()

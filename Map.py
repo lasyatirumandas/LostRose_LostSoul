@@ -52,7 +52,7 @@ class Map:
 | Enchanted_left(EL)    | Enchanted_backward(EB) | Sherwood_left(SL)    | Sherwood_backward(SB) |
 | starting_point(SP)    | Conques_belle(CB)      | Beast_forward(BF)    |   Beast_right(BR)     |
                                                  | Beast_left(BL)       |
-# """)
+ """)
 
 # calling the fucntion to print the map
 # Maps = Map("Map")
