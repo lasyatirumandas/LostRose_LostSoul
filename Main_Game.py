@@ -124,8 +124,7 @@ def tiles_moving():
 # RAPUNZEL Story
 # Picking inputs by the player
 Input1 = ['Anyone there?', 'Can anyone hear me?', 'Quit']
-Input2 = ["I will help you, come down.", "We can find them together",
-          "Quit"]
+Input2 = ["I will help you, come down.", "We can find them together", "Quit"]
 Input3 = ["Come on let's go in", "You never know, come on.", "Quit"]
 Input4 = ['Yess we did it Rapunzel!! Where can we find them?',
           'Perfect! where do they live?', 'Quit']
@@ -137,12 +136,12 @@ Place = ['Market', 'Church', 'Old Homes', 'New Homes']
 
 def play1():
     """Game play for the Rapunzel story"""
-    print("""In a far away tower, lived a beautiful princess named Rapunzel,
-          but she had no clue that she was a princess. She was taken from her
-          parents by Mother Gothel when she was born. Even since then,
-          Rapunzel has been locked in a tower. All she wants to do is to be
-          free and find her parents.
-          """)
+    print("Tangled")
+    print("""
+In a far away tower, lived a beautiful princess named Rapunzel, but she had
+no clue that she was a princess. She was taken from her parents by Mother
+Gothel when she was born. Even since then, Rapunzel has been locked in a
+tower. All she wants to do is to be free and find her parents.""")
     print("You are at the bottom of the tower and don't know anyone around.")
     # input when you meet rapunzel
     for Inputs1 in Input1:
@@ -152,13 +151,12 @@ def play1():
         if answer_input == 'Quit':
             sys.exit()
         elif answer_input == 'Anyone there?'or 'Can anyone hear me?':
-            print("""From the top of the tower, Rapunzel hears you
-                     and answers back.
-                     RAPUNZEL: Who are you? Where are you from? I can't
-                            help you because I am locked in this tower.
-                            You might wonder why and I wish I could tell
-                            you, but I don't know. I really want to find
-                            my parents, though. I have never seem them.""")
+            print("""
+From the top of the tower, Rapunzel hears you and answers back.
+RAPUNZEL: Who are you? Where are you from? I can't help you because I am
+locked in this tower. You might wonder why and I wish I could tell you, but I
+don't know. I really want to find my parents, though. I have never seem them.
+""")
             # input for talking to rapunzel
             for Inputs2 in Input2:
                 print(f"Inputs: {Inputs2}")
@@ -168,11 +166,10 @@ def play1():
                     sys.exit()
                 elif answer_input == "I will help you, come down" or "We can find them together":
                     print("""RAPUNZEL: Alright! I am coming down.""")
-                    print("""After she comes down, both of you continue on
-                          your path.
-                          Walking along a path, both of you look around to
-                          find clues. You find a Tavern and ask Rapunzel to
-                          come in with you.""")
+                    print("""
+After she comes down, both of you continue on your path. Walking along a path,
+both of you look around to find clues. You find a Tavern and ask Rapunzel to
+come in with you.""")
                     # input for convincing rapunzel to go into tavern
                     for Inputs3 in Input3:
                         print(f"Inputs: {Inputs3}")
@@ -326,6 +323,7 @@ def get_command(message):
 
 def game_choice():
     """Input for picking a Game"""
+    print("Land of Fairy Tales")
     print("Choose a game to start:")
     for game in Games:
         print(f"{Games.index(game) + 1}. {game.title()}")
