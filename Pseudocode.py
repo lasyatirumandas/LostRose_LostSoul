@@ -119,11 +119,8 @@
         # how to get their
     # they thank thugs and move on
 
-# walking alone they find a store and you are hungry
-# you go into the store while she stays outside
-# you buy something(user input) and find a map of corona
-# you call her and show it to her
-# both come out and follow the map(MAP)
+# walking alone they see a bridge so they cross it
+# they talk to stranger and find the map of corona
 
 # following the map they find the king and the queen
 # she shows them the picture and explains what happened to her
