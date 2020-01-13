@@ -324,7 +324,7 @@ def get_command(message):
 def game_choice():
     """Input for picking a Game"""
     print("Land of Fairy Tales")
-    print("Choose a game to start:")
+    print("Choose a game to start(type the number):")
     for game in Games:
         print(f"{Games.index(game) + 1}. {game.title()}")
     while True:
