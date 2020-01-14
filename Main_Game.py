@@ -12,7 +12,7 @@ from Map import Map
 # importing map file to print Corona
 from Map import Map1
 # importing character file to print character here
-from Character import Character
+# from Character import Character
 # Games to pick
 Games = ['BEAUTY AND THE BEAST', 'TANGLED']
 # things to do
@@ -44,8 +44,8 @@ def play():
     Maps = Map("Maps")
     Maps.printing_map()
     # printing the characters here
-    characters = Character("Character Names")
-    characters.printing_characters()
+#   characters = Character("Character Names")
+#   characters.printing_characters()
     # print list of valid actions and the places inside option places
     for action in Actions:
         print(f"- {action}")
